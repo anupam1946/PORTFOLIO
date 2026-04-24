@@ -201,7 +201,7 @@ export default function Home() {
             <Link to="/work" className="btn-primary">
               View My Work <ArrowRight size={17} />
             </Link>
-            <a href="#" className={`btn-secondary ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20 hover:text-white' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300 hover:bg-zinc-50'}`}>
+            <a href="/cv.pdf" className={`btn-secondary ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20 hover:text-white' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300 hover:bg-zinc-50'}`}>
               <Download size={16} /> Download CV
             </a>
           </div>

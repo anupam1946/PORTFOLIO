@@ -71,7 +71,7 @@ export default function About() {
                 className="btn-primary">
                 <ExternalLink size={15} /> LinkedIn
               </a>
-              <a href="#"
+              <a href="/cv.pdf"
                 className={`btn-secondary ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300'}`}>
                 <Download size={15} /> Download CV
               </a>

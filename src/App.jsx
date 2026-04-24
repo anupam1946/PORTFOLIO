@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
 import { BlogList, BlogDetail } from './pages/Blog';
+import { BookList, BookDetail } from './pages/Books';
 import Books from './pages/Books';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -28,7 +29,8 @@ function AppInner() {
         <Route path="/work" element={<Work />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
-        <Route path="/books" element={<Books />} />
+        <Route path="/books" element={<BookList />} />
+        <Route path="/books/:id" element={<BookDetail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

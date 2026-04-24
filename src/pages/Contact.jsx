@@ -6,7 +6,7 @@ import { useTheme } from '../context/ThemeContext';
 const SOCIALS = [
   { icon: GitBranch,    href: 'https://github.com/anupam1946/',     label: 'GitHub' },
   { icon: ExternalLink, href: 'https://linkedin.com/in/anupam-chettri-3b1617323/', label: 'LinkedIn' },
-  { icon: Globe,        href: 'https://twitter.com/anupamkc',    label: 'Twitter' },
+  { icon: Globe,        href: 'https://www.facebook.com/anupam.kc.852546',    label: 'Facebook' },
 ];
 
 export default function Contact() {
@@ -108,14 +108,14 @@ export default function Contact() {
                       Your Name
                     </label>
                     <input name="name" value={form.name} onChange={handleChange} required
-                      placeholder="John Doe" className={input} />
+                      placeholder="Anupam Pratap Singh K.C" className={input} />
                   </div>
                   <div>
                     <label className={`block text-xs font-semibold uppercase tracking-wider mb-2 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>
                       Email Address
                     </label>
                     <input name="email" type="email" value={form.email} onChange={handleChange} required
-                      placeholder="john@example.com" className={input} />
+                      placeholder="anupamchettri67@gmail.com" className={input} />
                   </div>
                 </div>
                 <div>
@@ -123,7 +123,7 @@ export default function Contact() {
                     Subject
                   </label>
                   <input name="subject" value={form.subject} onChange={handleChange} required
-                    placeholder="Project Collaboration / Job Opportunity / Just saying hi..." className={input} />
+                    placeholder="Tell Me About Your Project / Job Opportunity / Just saying hi..." className={input} />
                 </div>
                 <div>
                   <label className={`block text-xs font-semibold uppercase tracking-wider mb-2 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>

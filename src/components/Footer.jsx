@@ -12,9 +12,9 @@ const LINKS = [
 ];
 
 const SOCIALS = [
-  { icon: GitBranch,   href: 'https://github.com/anupamkc',    label: 'GitHub' },
-  { icon: ExternalLink,href: 'https://linkedin.com/in/anupamkc',label: 'LinkedIn' },
-  { icon: Globe,       href: 'https://twitter.com/anupamkc',   label: 'Twitter' },
+  { icon: GitBranch,   href: 'https://github.com/anupam1946',    label: 'GitHub' },
+  { icon: ExternalLink,href: 'https://www.linkedin.com/in/anupam-chettri-3b1617323/',label: 'LinkedIn' },
+  { icon: Globe,       href: 'https://www.facebook.com/anupam.kc.852546',   label: 'Facebook' },
 ];
 
 export default function Footer() {

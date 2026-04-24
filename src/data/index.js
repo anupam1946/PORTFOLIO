@@ -42,7 +42,7 @@ When I'm not in front of a screen, you'll find me hiking the trails around Valle
     { category: "Backend", items: ["Node.js", "Express", "Python", "Django", "REST APIs"] },
     { category: "Database", items: ["PostgreSQL", "MongoDB", "MySQL", "Firebase", "Redis"] },
     { category: "Tools", items: ["Git", "Docker", "AWS", "Figma", "Linux","Canva","WordPress"] },
-    { category: "AI Models", items: ["ChatGPT", "Gemini", "Perplexity", "DeepSeek", "Gpt-4"] },
+    { category: "Most Used AI Models", items: ["ChatGPT", "Gemini", "Perplexity", "DeepSeek", "Gpt-4"] },
   ],
   experience: [
     {
@@ -178,106 +178,458 @@ export const projects = [
 
 export const blogs = [
   {
-    id: 1,
-    title: "Why I Chose React Over Next.js for My Latest Project",
-    excerpt: "A deep dive into the trade-offs between React and Next.js, and why sometimes a simpler setup is the right choice.",
-    content: "...",
-    tags: ["React", "Next.js", "Web Dev"],
-    date: "April 10, 2024",
-    readTime: "6 min read",
-    featured: true,
-  },
+  id: 1,
+  title: "Why React Is Still My Go-To for Modern Web Apps",
+  excerpt: "A practical look at why React remains my preferred choice for building modern web applications.",
+  content: [
+    { type: "heading", text: "React Is Everywhere" },
+    { 
+      type: "paragraph", 
+      text: "When I started learning web development, I was overwhelmed by the number of frameworks available—React, Vue, Angular, Svelte, and more. I chose React, and I’ve never looked back." 
+    },
+    { 
+      type: "paragraph", 
+      text: "The ecosystem around React is massive. Whatever problem you face, chances are someone has already solved it and published a package for it." 
+    },
+
+    { type: "heading", text: "Component Thinking Changed How I Code" },
+    { 
+      type: "paragraph", 
+      text: "React taught me to think in components—small, reusable pieces of UI that you assemble together. This mindset improved not just my React code, but how I approach programming in general." 
+    },
+    { 
+      type: "bullets", 
+      items: [
+        "Break big problems into smaller pieces",
+        "Each component does one thing well",
+        "Reuse instead of rewriting"
+      ] 
+    },
+
+    { type: "heading", text: "The Job Market Loves React" },
+    { 
+      type: "paragraph", 
+      text: "Most frontend job listings in Nepal and abroad mention React. Learning it gave me a clear and practical path into the job market after graduating." 
+    },
+
+    { type: "heading", text: "When React Is Not the Right Choice" },
+    { 
+      type: "paragraph", 
+      text: "React is powerful, but it’s not always the best tool for every situation. Choosing the right tool depends on the project." 
+    },
+    { 
+      type: "bullets", 
+      items: [
+        "Simple sites — use plain HTML/CSS",
+        "SEO-heavy apps — use Next.js",
+        "Complex SPAs — React is a great fit"
+      ] 
+    },
+
+    { type: "heading", text: "Final Thoughts" },
+    { 
+      type: "paragraph", 
+      text: "React isn’t just a library—it’s a way of thinking. While it may not fit every project, it remains one of the most practical and reliable choices for modern web development." 
+    }
+  ],
+  tags: ["React", "Web Dev", "Frontend"],
+  date: "February 20, 2025",
+  readTime: "4 min read",
+  featured: true,
+},
   {
-    id: 2,
-    title: "Building Accessible UIs Without Losing Your Mind",
-    excerpt: "Practical tips for making your React apps more accessible — from semantic HTML to ARIA roles and keyboard navigation.",
-    content: "...",
-    tags: ["Accessibility", "React", "UI"],
-    date: "March 22, 2024",
-    readTime: "8 min read",
-    featured: true,
-  },
+  id: 2,
+  title: "Building Accessible UIs Without Losing Your Mind",
+  excerpt: "A simple, practical guide to building accessible user interfaces without overcomplicating your workflow.",
+  content: [
+    { type: "heading", text: "Start With the Basics" },
+    {
+      type: "paragraph",
+      text: "Accessibility can feel overwhelming, but it starts with simple fundamentals. Using the right HTML elements makes your UI more usable for everyone, including screen reader and keyboard users."
+    },
+    {
+      type: "bullets",
+      items: [
+        "Use buttons for actions",
+        "Add labels to form inputs",
+        "Maintain a clear heading structure"
+      ]
+    },
+
+    { type: "heading", text: "Make Everything Keyboard-Friendly" },
+    {
+      type: "paragraph",
+      text: "Your interface should work without a mouse. Many users rely on keyboards to navigate, so it's essential to support smooth and visible keyboard interactions."
+    },
+    {
+      type: "bullets",
+      items: [
+        "Ensure users can tab through elements",
+        "Keep focus states visible",
+        "Support Enter and Space for actions"
+      ]
+    },
+
+    { type: "heading", text: "Keep Text Easy to Read" },
+    {
+      type: "paragraph",
+      text: "Readable text is one of the easiest wins in accessibility. Make sure your content has strong contrast and doesn’t rely only on color to communicate meaning."
+    },
+
+    { type: "heading", text: "Fix Common Form Issues" },
+    {
+      type: "paragraph",
+      text: "Forms are often where accessibility breaks down. Clear labels and helpful error messages make a big difference in usability."
+    },
+    {
+      type: "bullets",
+      items: [
+        "Always include labels",
+        "Write clear error messages",
+        "Explain what went wrong"
+      ]
+    },
+
+    { type: "heading", text: "Use ARIA Carefully" },
+    {
+      type: "paragraph",
+      text: "ARIA can help enhance accessibility, but it should only be used when necessary. Native HTML elements already handle most accessibility needs."
+    },
+
+    { type: "heading", text: "Improve Gradually" },
+    {
+      type: "paragraph",
+      text: "You don’t need to fix everything at once. Start with small improvements and build from there."
+    },
+    {
+      type: "bullets",
+      items: [
+        "Fix contrast issues",
+        "Improve keyboard navigation",
+        "Add proper labels"
+      ]
+    },
+
+    { type: "heading", text: "Final Thoughts" },
+    {
+      type: "paragraph",
+      text: "Accessibility isn’t extra work—it’s part of good design. When you build with accessibility in mind, you create better experiences for everyone."
+    }
+  ],
+  tags: ["Accessibility", "UI/UX", "Frontend"],
+  date: "March 5, 2025",
+  readTime: "4 min read",
+  featured: false,
+},
+ {
+  id: 3,
+  title: "Understanding Git Beyond Just Push and Pull",
+  excerpt: "Most developers know git add, commit, and push—but Git has powerful features that can save your project and your sanity.",
+  content: [
+    { type: "heading", text: "Git Is More Than the Basics" },
+    {
+      type: "paragraph",
+      text: "Most developers start with git add, commit, and push. While these commands are essential, Git offers many powerful features that go far beyond the basics."
+    },
+    {
+      type: "paragraph",
+      text: "Understanding these features can help you manage code better, fix mistakes faster, and collaborate more effectively."
+    },
+
+    { type: "heading", text: "Branching Makes Everything Safer" },
+    {
+      type: "paragraph",
+      text: "Branches allow you to work on features or fixes without affecting the main codebase. This keeps your work isolated and reduces the risk of breaking things."
+    },
+    {
+      type: "bullets",
+      items: [
+        "Create branches for new features",
+        "Keep your main branch clean",
+        "Merge only when ready"
+      ]
+    },
+
+    { type: "heading", text: "Undo Mistakes Without Panic" },
+    {
+      type: "paragraph",
+      text: "One of Git’s biggest strengths is its ability to undo changes. Whether you made a bad commit or changed the wrong file, Git gives you tools to recover."
+    },
+    {
+      type: "bullets",
+      items: [
+        "Use git checkout to restore files",
+        "Use git reset to undo commits",
+        "Use git revert to safely reverse changes"
+      ]
+    },
+
+    { type: "heading", text: "Staging Is Your Control Layer" },
+    {
+      type: "paragraph",
+      text: "The staging area lets you choose exactly what goes into a commit. Instead of committing everything, you can stage specific changes for better control."
+    },
+
+    { type: "heading", text: "Collaboration Becomes Easier" },
+    {
+      type: "paragraph",
+      text: "Git makes it easier to work with others by tracking changes and resolving conflicts. Tools like pull requests help teams review and improve code before merging."
+    },
+
+    { type: "heading", text: "Final Thoughts" },
+    {
+      type: "paragraph",
+      text: "Git is more than just push and pull. Learning its deeper features will make you a more confident and efficient developer."
+    }
+  ],
+  tags: ["Git", "Tools", "Dev Tips"],
+  date: "March 15, 2025",
+  readTime: "3 min read",
+  featured: true,
+},
   {
-    id: 3,
-    title: "GSAP Animations That Don't Feel Like a Theme Park",
-    excerpt: "How to use GSAP to create smooth, meaningful animations that enhance UX rather than distract from it.",
-    content: "...",
-    tags: ["GSAP", "Animation", "CSS"],
-    date: "March 5, 2024",
-    readTime: "5 min read",
-    featured: true,
-  },
+  id: 4,
+  title: "How I Structure Every React Project I Build",
+  excerpt: "A consistent folder structure saves hours of confusion. Here’s the setup I use for every React project.",
+  content: [
+    { type: "heading", text: "Why Structure Matters" },
+    {
+      type: "paragraph",
+      text: "A good project structure makes your code easier to navigate, maintain, and scale. Without it, even small projects can quickly become messy and hard to manage."
+    },
+    {
+      type: "paragraph",
+      text: "Having a consistent structure across projects also saves time, especially when switching between different codebases."
+    },
+
+    { type: "heading", text: "My Go-To Folder Setup" },
+    {
+      type: "paragraph",
+      text: "I like to keep things simple and scalable. Here’s the structure I use in most React projects:"
+    },
+    {
+      type: "bullets",
+      items: [
+        "components/ – Reusable UI components",
+        "pages/ – Page-level components (routes)",
+        "hooks/ – Custom React hooks",
+        "services/ – API calls and business logic",
+        "utils/ – Helper functions",
+        "assets/ – Images, icons, and static files"
+      ]
+    },
+
+    { type: "heading", text: "Keep Components Small and Focused" },
+    {
+      type: "paragraph",
+      text: "Each component should do one thing well. Breaking UI into small, reusable pieces makes your code easier to test and reuse."
+    },
+
+    { type: "heading", text: "Separate Logic From UI" },
+    {
+      type: "paragraph",
+      text: "Avoid putting too much logic inside your components. Move data fetching and business logic into hooks or services to keep components clean."
+    },
+
+    { type: "heading", text: "Consistency Over Perfection" },
+    {
+      type: "paragraph",
+      text: "There is no single “perfect” structure. What matters most is consistency. Once you choose a pattern, stick with it across your projects."
+    },
+
+    { type: "heading", text: "Final Thoughts" },
+    {
+      type: "paragraph",
+      text: "A well-structured React project reduces confusion and improves productivity. Keep it simple, stay consistent, and adjust as your project grows."
+    }
+  ],
+  tags: ["React", "Architecture", "Best Practices"],
+  date: "March 25, 2025",
+  readTime: "3 min read",
+  featured: true,
+},
   {
-    id: 4,
-    title: "My First Year as a Developer: Lessons Learned",
-    excerpt: "Looking back on my journey from CS graduate to working developer — the good, the bad, and the deeply humbling.",
-    content: "...",
-    tags: ["Career", "Learning", "Personal"],
-    date: "February 18, 2024",
-    readTime: "10 min read",
-    featured: false,
-  },
+  id: 5,
+  title: "How I Structure Every React Project I Build",
+  excerpt: "A simple and consistent folder structure that keeps my React projects clean, scalable, and easy to maintain.",
+  content: [
+    { type: "heading", text: "Start Simple, Scale Later" },
+    {
+      type: "paragraph",
+      text: "When starting a React project, I avoid overcomplicating the structure. A simple setup helps you move faster, and you can always scale it as the project grows."
+    },
+
+    { type: "heading", text: "My Standard Folder Layout" },
+    {
+      type: "paragraph",
+      text: "I follow a consistent folder structure across all my projects so I never waste time figuring out where things go."
+    },
+    {
+      type: "bullets",
+      items: [
+        "components/ – Reusable UI elements",
+        "pages/ – Route-based pages",
+        "hooks/ – Custom hooks for logic",
+        "services/ – API calls and external logic",
+        "utils/ – Helper functions",
+        "assets/ – Images and static files"
+      ]
+    },
+
+    { type: "heading", text: "Think in Reusable Components" },
+    {
+      type: "paragraph",
+      text: "I break the UI into small components that can be reused across the app. This reduces duplication and keeps the codebase clean."
+    },
+
+    { type: "heading", text: "Keep Logic Separate" },
+    {
+      type: "paragraph",
+      text: "Business logic and data fetching don’t belong inside UI components. I move them into hooks or services to keep components focused and readable."
+    },
+
+    { type: "heading", text: "Consistency Is the Real Win" },
+    {
+      type: "paragraph",
+      text: "There’s no perfect structure, but consistency across projects saves a lot of time. Once you follow a pattern, development becomes much smoother."
+    },
+
+    { type: "heading", text: "Final Thoughts" },
+    {
+      type: "paragraph",
+      text: "A clean structure helps you scale without confusion. Keep things simple, stay organized, and let your structure evolve with your project."
+    }
+  ],
+  tags: ["React", "Architecture", "Best Practices"],
+  date: "April 2, 2025",
+  readTime: "3 min read",
+  featured: false,
+},
   {
-    id: 5,
-    title: "PostgreSQL vs MongoDB: Choosing the Right Database",
-    excerpt: "A practical comparison of relational and document databases with real-world use cases and performance benchmarks.",
-    content: "...",
-    tags: ["Database", "PostgreSQL", "MongoDB"],
-    date: "January 30, 2024",
-    readTime: "7 min read",
-    featured: false,
-  },
+  id: 6,
+  title: "Lessons From Building My First Full Stack App",
+  excerpt: "What I learned the hard way while building my first full stack application—from mistakes to mindset shifts.",
+  content: [
+    { type: "heading", text: "Start Small, Seriously" },
+    {
+      type: "paragraph",
+      text: "My biggest mistake was trying to build too much at once. A full stack app can get complex quickly, so starting small makes it easier to stay focused and actually finish."
+    },
+
+    { type: "heading", text: "Debugging Is the Real Skill" },
+    {
+      type: "paragraph",
+      text: "Things will break—often. Learning how to debug issues across the frontend, backend, and database is one of the most valuable skills you can develop."
+    },
+
+    { type: "heading", text: "Frontend and Backend Are Different Worlds" },
+    {
+      type: "paragraph",
+      text: "Working on both sides taught me that frontend and backend require different ways of thinking. One focuses on user experience, the other on data and logic."
+    },
+
+    { type: "heading", text: "APIs Are the Backbone" },
+    {
+      type: "paragraph",
+      text: "Connecting the frontend and backend through APIs made everything click. Understanding how data flows between them is key to building any full stack app."
+    },
+
+    { type: "heading", text: "You Will Refactor—A Lot" },
+    {
+      type: "paragraph",
+      text: "My initial code was far from perfect, and that’s okay. Refactoring helped me improve structure, readability, and performance over time."
+    },
+
+    { type: "heading", text: "Deployment Is a Different Challenge" },
+    {
+      type: "paragraph",
+      text: "Getting the app live was harder than building it. Environment variables, build steps, and server setup all introduced new challenges."
+    },
+
+    { type: "heading", text: "Final Thoughts" },
+    {
+      type: "paragraph",
+      text: "Building my first full stack app was challenging but worth it. The key is to keep going, learn from mistakes, and improve with each project."
+    }
+  ],
+  tags: ["Full Stack", "Learning", "Dev Journey"],
+  date: "April 10, 2025",
+  readTime: "4 min read",
+  featured: false,
+},
 ];
 
 export const books = [
   {
     id: 1,
-    title: "Clean Code",
-    author: "Robert C. Martin",
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: 2018,
     rating: 5,
     status: "Read",
-    year: "2024",
-    note: "A must-read for every developer. Changed how I think about naming variables and writing functions.",
-    tags: ["Programming", "Best Practices"],
+    note: "Small changes, remarkable results. This book changed how I approach building habits and productivity.",
+    tags: ["Self-Improvement", "Habits", "Psychology"],
+    description: "Transform your life with tiny changes. Discover how small habits compound into extraordinary results over time.",
+    details: "Atomic Habits by James Clear is a practical guide on how tiny changes can lead to remarkable results. The book introduces the concept of habit stacking and the power of compounding. It covers how to identify your habits, create new ones, and break bad ones. A must-read for anyone looking to improve their life through better habits.",
   },
   {
     id: 2,
-    title: "The Pragmatic Programmer",
-    author: "David Thomas & Andrew Hunt",
+    title: "Deep Work",
+    author: "Cal Newport",
+    year: 2016,
     rating: 5,
     status: "Read",
-    year: "2024",
-    note: "Full of timeless wisdom. The 'broken windows' theory alone is worth the entire book.",
-    tags: ["Career", "Programming"],
+    note: "The ability to focus without distraction is a superpower in our modern world.",
+    tags: ["Productivity", "Focus", "Work"],
+    description: "Master the skill of focused, uninterrupted work in a distracted world and achieve professional excellence.",
+    details: "Deep Work by Cal Newport explores how to cultivate the ability to focus without distraction on cognitively demanding tasks. The book presents strategies for eliminating distractions, structuring your work for deep focus, and maximizing your productivity. In today's world of constant notifications and shallow work, deep work is more valuable than ever.",
   },
   {
     id: 3,
-    title: "Atomic Habits",
-    author: "James Clear",
+    title: "The Pragmatic Programmer",
+    author: "David Thomas & Andrew Hunt",
+    year: 2019,
     rating: 4,
-    status: "Read",
-    year: "2023",
-    note: "Applied this directly to my coding practice routines. The 1% improvement concept is genuinely life-changing.",
-    tags: ["Productivity", "Self-improvement"],
+    status: "Reading",
+    note: "Essential practices for software developers - a must read for every programmer.",
+    tags: ["Programming", "Best Practices", "Career"],
+    description: "Improve your programming skills with practical, timeless advice from experienced software developers.",
+    details: "The Pragmatic Programmer is a comprehensive guide to becoming a better software developer. It covers topics like code quality, debugging, testing, and refactoring. The book emphasizes practical approaches to programming challenges and encourages developers to think critically about their work. Each section provides actionable advice that can be immediately applied to your projects.",
   },
   {
     id: 4,
-    title: "Designing Data-Intensive Applications",
-    author: "Martin Kleppmann",
+    title: "Clean Code",
+    author: "Robert C. Martin",
+    year: 2008,
     rating: 5,
-    status: "Reading",
-    year: "2024",
-    note: "Dense but incredibly rewarding. The best resource I've found for understanding distributed systems.",
-    tags: ["Systems", "Database"],
+    status: "Read",
+    note: "Writing code that is readable and maintainable is an art. This book is a masterpiece.",
+    tags: ["Programming", "Best Practices", "Code Quality"],
+    description: "Learn how to write code that is clean, readable, and maintainable for professional software development.",
+    details: "Clean Code by Robert C. Martin teaches you how to write code that is not just functional but also elegant and maintainable. The book covers naming conventions, function design, error handling, and testing. It emphasizes that writing clean code is essential for professional development and long-term project success.",
   },
   {
     id: 5,
     title: "The Design of Everyday Things",
     author: "Don Norman",
+    year: 2013,
     rating: 4,
     status: "Read",
-    year: "2023",
-    note: "Fundamentally changed how I look at UX. Now I notice bad affordances everywhere.",
-    tags: ["Design", "UX"],
+    note: "Understanding user psychology is key to creating great products and experiences.",
+    tags: ["Design", "UX", "Psychology"],
+    description: "Discover why some products work well and others don't—and learn the psychology behind great design.",
+    details: "The Design of Everyday Things explores how good design makes life easier and poor design causes frustration. Don Norman uses real-world examples to explain the principles of good design. The book covers topics like affordances, signifiers, feedback, and conceptual models. Essential reading for anyone creating products or interfaces.",
+  },
+  {
+    id: 6,
+    title: "Thinking, Fast and Slow",
+    author: "Daniel Kahneman",
+    year: 2011,
+    rating: 4,
+    status: "Read",
+    note: "How our brain works - biases, heuristics, and decision making explained beautifully.",
+    tags: ["Psychology", "Decision Making", "Behavior"],
+    description: "Understand how your mind works and the cognitive biases that influence your decisions every day.",
+    details: "Thinking, Fast and Slow by Daniel Kahneman explores the two systems of thought: fast, intuitive thinking and slow, deliberate thinking. The book reveals how these systems interact and where our intuitions lead us astray. It covers cognitive biases, heuristics, and how to make better decisions. A fascinating look into human psychology and behavior.",
   },
 ];

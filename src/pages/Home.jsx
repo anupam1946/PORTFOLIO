@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ArrowUpRight, Download, Sparkles, Clock, Calendar } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Download, Sparkles, Clock, Calendar, Award } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import { personalInfo, projects, blogs } from '../data';
+import { personalInfo, projects, blogs, achievements } from '../data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,6 +127,7 @@ export default function Home() {
   const heroRef   = useRef(null);
   const statsRef  = useRef(null);
   const worksRef  = useRef(null);
+  const achievementsRef = useRef(null);
   const blogRef   = useRef(null);
 
   useEffect(() => {
@@ -147,6 +148,12 @@ export default function Home() {
       { y: 0, opacity: 1, duration: 0.6, stagger: 0.12, ease: 'power2.out',
         scrollTrigger: { trigger: worksRef.current, start: 'top 80%' } }
     );
+    /* achievements */
+    gsap.fromTo('.achievement-card',
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, stagger: 0.12, ease: 'power2.out',
+        scrollTrigger: { trigger: achievementsRef.current, start: 'top 80%' } }
+    );
     /* blog rows */
     gsap.fromTo('.blog-row',
       { x: -30, opacity: 0 },
@@ -156,6 +163,7 @@ export default function Home() {
   }, []);
 
   const featuredProjects = projects.filter(p => p.featured);
+  const featuredAchievements = achievements.filter(a => a.featured).slice(0, 2);
   const featuredBlogs    = blogs.filter(b => b.featured).slice(0, 3);
 
   const bg    = isDark ? 'bg-zinc-950' : 'bg-white';
@@ -265,6 +273,68 @@ export default function Home() {
           <div className="mt-8 md:hidden text-center">
             <Link to="/work" className={`inline-flex items-center gap-2 text-sm font-semibold text-indigo-500`}>
               All Projects <ArrowRight size={15} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ACHIEVEMENTS ── */}
+      <section className={`${bgAlt} section-padding`} ref={achievementsRef}>
+        <div className="section-container">
+          <div className="flex items-end justify-between mb-12">
+            <SectionHeader eyebrow="Certifications" title="Achievements & Awards" />
+            <Link to="/achievements"
+              className={`hidden md:flex items-center gap-2 text-sm font-semibold shrink-0 mb-12 transition-colors ${isDark ? 'text-zinc-400 hover:text-white' : 'text-zinc-500 hover:text-zinc-900'}`}>
+              View All <ArrowRight size={15} />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {featuredAchievements.map(achievement => (
+              <Link
+                key={achievement.id}
+                to={`/achievements/${achievement.id}`}
+                className={`achievement-card group flex flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg ${
+                  isDark
+                    ? 'bg-zinc-900 border-white/5 hover:border-indigo-500/30 hover:shadow-indigo-500/10'
+                    : 'bg-white border-zinc-200 hover:border-indigo-200 hover:shadow-zinc-200'
+                }`}>
+                <div className="h-1 w-12 rounded-full mb-4" style={{ background: achievement.color }} />
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-display font-bold text-lg leading-tight group-hover:text-indigo-500 transition-colors ${
+                      isDark ? 'text-white' : 'text-zinc-900'
+                    }`}>
+                      {achievement.title}
+                    </h3>
+                    <p className={`text-sm mt-1 font-medium ${isDark ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                      {achievement.issuer}
+                    </p>
+                  </div>
+                  <div className="shrink-0 p-2 rounded-lg" style={{ backgroundColor: `${achievement.color}15` }}>
+                    <Award size={20} style={{ color: achievement.color }} />
+                  </div>
+                </div>
+                <div className={`flex items-center gap-2 text-xs mb-3 ${isDark ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                  <Calendar size={13} /> {achievement.date}
+                </div>
+                <p className={`text-sm leading-relaxed mb-4 ${isDark ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                  {achievement.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {achievement.tags.slice(0, 3).map(tag => (
+                    <span key={tag} className={`tag-pill text-[11px] ${
+                      isDark ? 'bg-zinc-800 text-zinc-400' : 'bg-zinc-100 text-zinc-600'
+                    }`}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 md:hidden text-center">
+            <Link to="/achievements" className={`inline-flex items-center gap-2 text-sm font-semibold text-indigo-500`}>
+              View All Certificates <ArrowRight size={15} />
             </Link>
           </div>
         </div>

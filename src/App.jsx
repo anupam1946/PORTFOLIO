@@ -7,6 +7,7 @@ import Work from './pages/Work';
 import { BlogList, BlogDetail } from './pages/Blog';
 import { BookList, BookDetail } from './pages/Books';
 import Books from './pages/Books';
+import { AchievementList, AchievementDetail } from './pages/Achievements';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
@@ -29,6 +30,8 @@ function AppInner() {
         <Route path="/work" element={<Work />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/achievements" element={<AchievementList />} />
+        <Route path="/achievements/:id" element={<AchievementDetail />} />
         <Route path="/books" element={<BookList />} />
         <Route path="/books/:id" element={<BookDetail />} />
         <Route path="/contact" element={<Contact />} />

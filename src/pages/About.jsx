@@ -36,7 +36,7 @@ export default function About() {
       <div className="section-container pt-28 pb-24">
 
         {/* ── HEADER ── */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-24">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20 lg:mb-24">
           {/* Left Content */}
           <div>
             <div className="about-item">
@@ -58,28 +58,41 @@ export default function About() {
               </a>
             </div>
 
+            {/* Image - Shows after email on mobile */}
+            <div className="about-item flex lg:hidden items-center justify-center mb-8">
+              <div className={`relative w-full max-w-sm aspect-square rounded-2xl overflow-hidden ${isDark ? 'bg-zinc-900/50' : 'bg-indigo-50/30'}`}>
+                <img
+                  src={personalInfo.photo}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover"
+                />
+                {/* Gradient overlay effect */}
+                <div className={`absolute inset-0 bg-gradient-to-t ${isDark ? 'from-zinc-950 via-transparent' : 'from-white/40 via-transparent'}`} />
+              </div>
+            </div>
+
             <div className={`about-item whitespace-pre-line space-y-4 text-lg leading-relaxed ${isDark ? 'text-zinc-400' : 'text-zinc-600'}`}>
               {personalInfo.longBio}
             </div>
 
             <div className="about-item flex flex-wrap items-center gap-3 mt-8">
               <a href={personalInfo.socials.github} target="_blank" rel="noopener noreferrer"
-                className={`btn-secondary ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300'}`}>
+                className={`btn-secondary cursor-pointer ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300'}`}>
                 <GitBranch size={15} /> GitHub
               </a>
               <a href={personalInfo.socials.linkedin} target="_blank" rel="noopener noreferrer"
-                className="btn-primary">
+                className="btn-primary cursor-pointer">
                 <ExternalLink size={15} /> LinkedIn
               </a>
               <a href="/cv.pdf"
-                className={`btn-secondary ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300'}`}>
+                className={`btn-secondary cursor-pointer ${isDark ? 'border-white/10 text-zinc-300 hover:border-white/20' : 'border-zinc-200 text-zinc-700 hover:border-zinc-300'}`}>
                 <Download size={15} /> Download CV
               </a>
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="about-item flex items-center justify-center">
+          {/* Desktop Image Only */}
+          <div className="about-item hidden lg:flex items-center justify-center">
             <div className={`relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden ${isDark ? 'bg-zinc-900/50' : 'bg-indigo-50/30'}`}>
               <img
                 src={personalInfo.photo}

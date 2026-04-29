@@ -38,10 +38,10 @@
     @apply rounded-2xl border transition-all duration-300;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-0.5 cursor-pointer;
   }
   .btn-secondary {
-    @apply inline-flex items-center gap-2 px-7 py-3.5 font-semibold rounded-xl border transition-all duration-200 hover:-translate-y-0.5;
+    @apply inline-flex items-center gap-2 px-7 py-3.5 font-semibold rounded-xl border transition-all duration-200 hover:-translate-y-0.5 cursor-pointer;
   }
   .input-field {
     @apply w-full px-4 py-3.5 rounded-xl border text-sm outline-none transition-all duration-200 font-body;

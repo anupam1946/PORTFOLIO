@@ -79,7 +79,7 @@ export default function About() {
           </div>
 
           {/* Right Image */}
-          <div className="about-item hidden lg:flex items-center justify-center">
+          <div className="about-item flex items-center justify-center">
             <div className={`relative w-full max-w-lg aspect-square rounded-2xl overflow-hidden ${isDark ? 'bg-zinc-900/50' : 'bg-indigo-50/30'}`}>
               <img
                 src={personalInfo.photo}

@@ -3,6 +3,12 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Check if API key exists
+  if (!process.env.GEMINI_KEY) {
+    console.error('GEMINI_KEY environment variable is not set');
+    return res.status(500).json({ error: 'API key not configured' });
+  }
+
   const { messages, systemPrompt } = req.body;
 
   try {
@@ -25,6 +31,7 @@ export default async function handler(req, res) {
     const data = await response.json();
     return res.status(200).json(data);
   } catch (err) {
-    return res.status(500).json({ error: 'Failed to fetch from Gemini' });
+    console.error('Gemini API error:', err);
+    return res.status(500).json({ error: 'Failed to fetch from Gemini', details: err.message });
   }
 }

@@ -122,7 +122,6 @@ export default function Chatbot() {
     setMessages(updatedMessages);
     setInput("");
     setLoading(true);
-    console.log("KEY:", import.meta.env.VITE_GEMINI_KEY); // 👈 add this line
 
     try {
       /* Build Gemini contents array — skip the first assistant greeting

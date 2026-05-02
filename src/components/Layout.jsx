@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import './Chatbot';
+import Chatbot from './Chatbot';
 
 export default function Layout({ children }) {
   const { isDark } = useTheme();
@@ -19,6 +21,7 @@ export default function Layout({ children }) {
         {children}
       </div>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
